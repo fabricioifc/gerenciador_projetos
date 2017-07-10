@@ -4,10 +4,9 @@
 
 production:
   adapter: postgresql
-  database: redmine
-  host: localhost
-  username: postgres
-  password: postgres
+  database: redmine_production
+  username:
+  password:
   encoding: utf8
 
 development:
