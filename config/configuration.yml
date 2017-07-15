@@ -13,8 +13,8 @@ default:
   # See the examples below and the Rails guide for more configuration options:
   # http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
   email_delivery:
-    delivery_method: :async_sendmail
-    smtp_settings:
+    delivery_method: :async_smtp
+    async_smtp_settings:
       enable_starttls_auto: true
       address: Rails.application.secrets.address,
       port: '587'
