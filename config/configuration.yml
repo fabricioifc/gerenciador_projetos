@@ -16,7 +16,7 @@ default:
     delivery_method: :async_sendmail
     smtp_settings:
       enable_starttls_auto: true
-      address: "smtp.gmail.com"
+      address: Rails.application.secrets.address,
       port: '587'
       domain: Rails.application.secrets.domain_name,
       authentication: :plain
