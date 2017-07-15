@@ -13,6 +13,15 @@ default:
   # See the examples below and the Rails guide for more configuration options:
   # http://guides.rubyonrails.org/action_mailer_basics.html#action-mailer-configuration
   email_delivery:
+    delivery_method: :async_sendmail
+    smtp_settings:
+      enable_starttls_auto: true
+      address: "smtp.gmail.com"
+      port: '587'
+      domain: Rails.application.secrets.domain_name,
+      authentication: :plain
+      user_name: Rails.application.secrets.email_provider_username,
+      password: Rails.application.secrets.email_provider_password
 
   # ==== Simple SMTP server at localhost
   #
